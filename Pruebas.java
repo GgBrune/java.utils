@@ -12,14 +12,16 @@ public class Pruebas
     private String text;
     private ArrayList<Integer> randomNumbers;
     private Random random;
+    private ArrayList<String> responses;
 
     /**
      * Constructor for objects of class Pruebas
      */
     public Pruebas()
     {
-        randomNumbers = new ArrayList<>();
-        Random random = new Random();
+        randomNumbers = new ArrayList<Integer>();
+        responses = new ArrayList<String>();
+        random = new Random();
     }
 
     public String apellido(String text)
@@ -46,6 +48,7 @@ public class Pruebas
     }
     
     /**
+     * !ERROR!
      * public int throwDice() {
         int throwed = random.nextInt(6);
         if (throwed == 0) {
@@ -54,4 +57,21 @@ public class Pruebas
         return throwed;
         }
      */
+    
+    /**
+     * !ERROR!
+     * public String getResponse() {
+        int numberResponse = random.nextInt(2);
+        responses.add("yes");
+        responses.add("no");
+        responses.add("bye");
+        int whatResponse = responses.get(0);
+        for (String response : responses){
+            if (numberResponse == get.response) {
+                return response;
+            }
+        }
+       }
+     */
+    
 }
