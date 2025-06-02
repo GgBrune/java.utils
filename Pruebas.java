@@ -1,5 +1,6 @@
 import java.util.Random;
 import java.util.ArrayList;
+import java.security.SecureRandom;
 /**
  * Write a description of class Pruebas here.
  * 
@@ -47,31 +48,28 @@ public class Pruebas
         randomNumbers.clear();
     }
     
-    /**
-     * !ERROR!
-     * public int throwDice() {
+    public int throwDice() {
         int throwed = random.nextInt(6);
         if (throwed == 0) {
           throwed = random.nextInt(6);
         }
         return throwed;
-        }
-     */
+    }
     
-    /**
-     * !ERROR!
-     * public String getResponse() {
-        int numberResponse = random.nextInt(2);
+    public String getResponse() {
+        int numberResponse = random.nextInt(3);
         responses.add("yes");
         responses.add("no");
-        responses.add("bye");
-        int whatResponse = responses.get(0);
-        for (String response : responses){
-            if (numberResponse == get.response) {
-                return response;
-            }
-        }
-       }
-     */
+        responses.add("maybe");
+        String whatResponse = responses.get(numberResponse);
+        return whatResponse;
+    }
     
+    public int randomNumber(int max, int min) {
+        int number = random.nextInt(max);
+        while (number < min) {
+          number = random.nextInt(max);
+        }
+        return number;
+    }
 }
