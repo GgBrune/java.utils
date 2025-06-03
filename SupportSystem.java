@@ -43,7 +43,7 @@ public class SupportSystem
             //if(input.startsWith("bye")) {
             //    finished = true;
             
-            if (input.equals("bye")) {
+            if (input.contains("bye")) {
                 finished = true;
             }
             else {

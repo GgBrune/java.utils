@@ -49,16 +49,17 @@ public class Responder {
                         "Looked around and really compared our features?");
     }
     
-    public String generateResponse(HashSet<String> word)
+    public String generateResponse(HashSet<String> bracket)
     {
-        String response = responseMap.get(word);
-        if (response != null) {
+        for (String words : bracket) {
+            String response = responseMap.get(words);
+            if (response != null) {
             return response;
-        } else {
-            return defaultResponses();
+            }
         }
+        return defaultResponses();
     }
-    
+
     private String defaultResponses()
     {
         int numberResponse = random.nextInt(randomResponses.size());
