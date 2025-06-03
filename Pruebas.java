@@ -1,6 +1,4 @@
-import java.util.Random;
-import java.util.ArrayList;
-import java.security.SecureRandom;
+import java.util.*;
 /**
  * Write a description of class Pruebas here.
  * 
@@ -11,9 +9,12 @@ public class Pruebas
 {
     // instance variables - replace the example below with your own
     private String text;
+    
     private ArrayList<Integer> randomNumbers;
     private Random random;
     private ArrayList<String> responses;
+    
+    private HashMap<String, String> contacts;
 
     /**
      * Constructor for objects of class Pruebas
@@ -23,6 +24,8 @@ public class Pruebas
         randomNumbers = new ArrayList<Integer>();
         responses = new ArrayList<String>();
         random = new Random();
+        
+        contacts = new HashMap<String, String>();
     }
 
     public String apellido(String text)
@@ -58,9 +61,9 @@ public class Pruebas
     
     public String getResponse() {
         int numberResponse = random.nextInt(3);
-        responses.add("yes");
-        responses.add("no");
-        responses.add("maybe");
+            responses.add("yes");
+            responses.add("no");
+            responses.add("maybe");
         String whatResponse = responses.get(numberResponse);
         return whatResponse;
     }
@@ -71,5 +74,14 @@ public class Pruebas
           number = random.nextInt(max);
         }
         return number;
+    }
+    
+    public void enterNumber(String name, String number) {
+        contacts.put(name, number);
+    }
+    
+    public String lookUpNumber(String name) {
+        String telephone = contacts.get(name);
+        return telephone;
     }
 }
