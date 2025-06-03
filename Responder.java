@@ -49,7 +49,7 @@ public class Responder {
                         "Looked around and really compared our features?");
     }
     
-    public String generateResponse(String word)
+    public String generateResponse(HashSet<String> word)
     {
         String response = responseMap.get(word);
         if (response != null) {
