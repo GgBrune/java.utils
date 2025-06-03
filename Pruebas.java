@@ -3,10 +3,10 @@ import java.util.Random;
 import java.util.HashMap;
 import java.util.HashSet;
 /**
- * Write a description of class Pruebas here.
+ * Class full of methods from differents activities of the book.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Brunella 
+ * @2025
  */
 public class Pruebas
 {
@@ -22,7 +22,7 @@ public class Pruebas
     private HashSet<String> words;
 
     /**
-     * Constructor for objects of class Pruebas
+     * Constructor for objects of class Pruebas.
      */
     public Pruebas()
     {
@@ -34,7 +34,11 @@ public class Pruebas
         
         words = new HashSet<String>();
     }
-
+    
+    /**
+     * It returns the text without any space on 
+     * the first part or the last part of the word.
+     */
     public String apellido(String text)
     {
         this.text = text;
@@ -42,11 +46,17 @@ public class Pruebas
         return text;
     }
     
+    /**
+     * It prints a random number.
+     */
     public void printOneRandom() {
         int randomNumber = random.nextInt();
         System.out.println(randomNumber);
     }
     
+    /**
+     * It prints the number of random numbers entered as a parameter.
+     */
     public void printMultiRandom(int howMany) {
         int i = 0;
         while (i < howMany) {
@@ -58,6 +68,9 @@ public class Pruebas
         randomNumbers.clear();
     }
     
+    /**
+     * It is a simulation of a dice.
+     */
     public int throwDice() {
         int throwed = random.nextInt(6);
         if (throwed == 0) {
@@ -66,6 +79,9 @@ public class Pruebas
         return throwed;
     }
     
+    /**
+     * It returns a random response from the list.
+     */
     public String getResponse() {
         int numberResponse = random.nextInt(3);
             responses.add("yes");
@@ -75,6 +91,9 @@ public class Pruebas
         return whatResponse;
     }
     
+    /**
+     * It returns a random number from the bound entered as a parameter.
+     */
     public int randomNumber(int max, int min) {
         int number = random.nextInt(max);
         while (number < min) {
@@ -83,15 +102,26 @@ public class Pruebas
         return number;
     }
     
+    /**
+     * It adds a name with the corresponding telephone number
+     * to a collection.
+     */
     public void enterNumber(String name, String number) {
         contacts.put(name, number);
     }
     
+    /**
+     * It searchs the telephone number that matchs with
+     * the name entered.
+     */
     public String lookUpNumber(String name) {
         String telephone = contacts.get(name);
         return telephone;
     }
     
+    /**
+     * Nothing.
+     */
     public HashSet<String> exampleHash(String bracket)
     {
         String text = bracket.trim().toLowerCase();
