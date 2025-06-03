@@ -1,4 +1,7 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.HashMap;
+import java.util.HashSet;
 /**
  * The responder class represents a response generator object.
  * It is used to generate an automatic response to an input string.
@@ -19,6 +22,8 @@ public class Responder {
     {
         random = new Random();
         randomResponses = new ArrayList<String>();
+        responseMap = new HashMap<String, String>();
+        randomResponsesList();
         responsesList();
     }
 

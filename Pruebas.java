@@ -1,4 +1,7 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.HashMap;
+import java.util.HashSet;
 /**
  * Write a description of class Pruebas here.
  * 
@@ -15,6 +18,8 @@ public class Pruebas
     private ArrayList<String> responses;
     
     private HashMap<String, String> contacts;
+    
+    private HashSet<String> words;
 
     /**
      * Constructor for objects of class Pruebas
@@ -26,6 +31,8 @@ public class Pruebas
         random = new Random();
         
         contacts = new HashMap<String, String>();
+        
+        words = new HashSet<String>();
     }
 
     public String apellido(String text)
@@ -83,5 +90,15 @@ public class Pruebas
     public String lookUpNumber(String name) {
         String telephone = contacts.get(name);
         return telephone;
+    }
+    
+    public HashSet<String> exampleHash(String bracket)
+    {
+        String text = bracket.trim().toLowerCase();
+        String[] wordArray = text.split(" ");
+        for (String word : wordArray) {
+            words.add(word);
+        }
+        return words;
     }
 }

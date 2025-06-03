@@ -28,8 +28,8 @@ public class InputReader
      */
     public String getInput()
     {
-        System.out.print("> ");         // print prompt
-        String inputLine = reader.nextLine();
+        System.out.print("> ");
+        String inputLine = reader.nextLine().trim().toLowerCase();
 
         return inputLine;
     }
